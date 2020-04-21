@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Character from "./components/Character";
 import axios from "axios";
 import './App.css';
-import './custom.css';
 
 const App = props => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -18,7 +17,7 @@ const App = props => {
     .get('https://rickandmortyapi.com/api/character/')
     .then(response => {
       setCharacter(response.data.results);
-      console.log('Api info:', characters);
+      // console.log('Api info:', characters);
     })
     .catch(error => console.log('Error:', error))
   }, [])
